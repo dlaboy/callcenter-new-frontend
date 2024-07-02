@@ -263,40 +263,42 @@ const Chat = () => {
     const {isDark,setIsDark} = useContext(darkContext)
 
     const {userLanguage,setLanguage} = useContext(darkContext)
-    const [preguntas,setPreguntas] = useState([ "Do we have payment gateway products?",
-        "Does the company have solutions for billing companies?",
-        "What applications and services does the company have?",
-        "What services are located in Brazil?"])
+    const [preguntas,setPreguntas] = useState([  "¿Cómo puedo crear una cuenta en ATH Móvil?"
+        ,"¿Cuál es el proceso para añadir una tarjeta a la cuenta de ATH Móvil?"
+        ,"¿Qué debo hacer si olvido mi contraseña de ATH Móvil?"
+        ,"¿Cómo puedo enviar dinero a otra persona usando ATH Móvil?"])
     const [error_message_text,setErrorMessage] = useState("I'm sorry, I had a problem with the request. Please report the error to the support team. ")
 
     useEffect(()=>{
         if (userLanguage === "es"){
             setErrorMessage("Lo siento, yo tuve un problema con la solicitud. Por favor informe el error al equipo de soporte. ")
             setPlaceholderText("Escribe tu pregunta aqui");
-            setPreguntas([
-                "¿Tenemos productos de pasarelas de pago?"
-                ,"¿La compañía tiene soluciones para empresas facturadoras?"
-                ,"¿Qué aplicaciones y servicios posee la compañía?"
-                ,"¿Qué servicios están localizados en Brasil?"
-            ])
+            setPreguntas([  "¿Cómo puedo crear una cuenta en ATH Móvil?"
+                ,"¿Cuál es el proceso para añadir una tarjeta a la cuenta de ATH Móvil?"
+                ,"¿Qué debo hacer si olvido mi contraseña de ATH Móvil?"
+                ,"¿Cómo puedo enviar dinero a otra persona usando ATH Móvil?"])
         }
         else if (userLanguage ==="pt"){
             setErrorMessage("Desculpe, tive um problema técnico com a solicitação. Por favor informar o erro a equipe de suporte. ")
             setPlaceholderText("Escreva aqui sua pergunta");
             setPreguntas([
-                "Temos produtos de gateway de pagamento?",
-                "A empresa possui soluções para empresas de faturamento?",
-                "Quais aplicações e serviços a empresa possui?",
-                "Quais serviços estão localizados no Brasil?"
-            ])
+                "Como posso criar uma conta no ATH Móvil?",
+                "Qual é o processo para adicionar um cartão à minha conta do ATH Móvil?",
+                "O que devo fazer se esquecer minha senha do ATH Móvil?",
+                "Como posso enviar dinheiro para outra pessoa usando ATH Móvil?"
+            ]
+            )
         }
         else if (userLanguage === "en"){
             setErrorMessage("I'm sorry, I had a problem with the request. Please report the error to the support team. ")
             setPlaceholderText("Write your question here");
-            setPreguntas([ "Do we have payment gateway products?",
-                "Does the company have solutions for billing companies?",
-                "What applications and services does the company have?",
-                "What services are located in Brazil?"])
+            setPreguntas([
+                "How can I create an account on ATH Móvil?",
+                "What is the process to add a card to my ATH Móvil account?",
+                "What should I do if I forget my ATH Móvil password?",
+                "How can I send money to another person using ATH Móvil?"
+            ]
+            )
         }
     },[userLanguage])
     
@@ -314,7 +316,7 @@ const Chat = () => {
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
                             {/* <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" /> */}
-                            <h1 className={styles.chatEmptyStateTitle}>Products Navigator Copilot</h1>
+                            <h1 className={styles.chatEmptyStateTitle}>ATHM Call Center Copilot</h1>
                             {/* <h1 className={styles.chatEmptyStateTitle}>Dummy Text</h1>
                             <h1 className={styles.chatEmptyStateTitle}>Dummy Text</h1>
                             <h1 className={styles.chatEmptyStateTitle}>Dummy Text</h1>
