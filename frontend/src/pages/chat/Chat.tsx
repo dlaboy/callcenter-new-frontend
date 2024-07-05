@@ -64,7 +64,7 @@ const Chat = () => {
 
         error && setError(undefined);
         setIsLoading(true);
-        console.log("Loading: ",isLoading)
+    
 
         setActiveCitation(undefined);
         setActiveAnalysisPanelTab(undefined);
@@ -120,7 +120,7 @@ const Chat = () => {
             setError(e);
         } finally {
             setIsLoading(false);
-            console.log("Loading: ",isLoading)
+            console.log("Loading false =",isLoading)
         }
     };
 
