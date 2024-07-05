@@ -23,16 +23,16 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend }: Pr
     useEffect(()=>{
         if(starter !== ""){
             setQuestion(starter)
-            setTrigger(prev => prev + 1)
+            // setTrigger(prev => prev + 1)
         }  
     },[starter])
 
-    useEffect(()=>{
-        onSend(question)
-        if (clearOnSend) {
-            setQuestion("");
-        }
-    },[triggerStarter])
+    // useEffect(()=>{
+    //     onSend(question)
+    //     if (clearOnSend) {
+    //         setQuestion("");
+    //     }
+    // },[triggerStarter])
     const sendQuestion = () => {
         if (disabled || !question.trim()) {
             return;
